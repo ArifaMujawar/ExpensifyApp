@@ -20,8 +20,70 @@ nicely with react. It allows us to track changing data. it is pretty much same t
 component state
 
 -WHY Redux??
-- In Comples Apps it is hard to store states.
+- In Complex Apps it is hard to store states.
 
 
--Action is an object that gets sent to the store.
--Action has to written in Caps.
+-Action is an object that gets sent to the store. They are a way to communicate with 
+store
+-Action type has to written in Caps.
+- If we want ot print something to console when the state changes everytime, we can
+ use store.subscribe()
+
+ -If you do not want to print all time, add store.subscribe to a const and call that
+  constant before store.dispatch()
+
+
+  #### Destructuring in ES6 ######
+
+  /////Destructuring Object //////
+Ex: const person = {
+    name: 'Arifa',
+    age: 26,
+    location : {
+        city:'bgm',
+        temp: 33
+    }
+};
+
+console.log('Arifa is 26 years old');
+
+console.log(`${person.name} is ${person.age}`);
+
+const name = person.name;
+const age = person.age;
+
+console.log(`${name} is ${age}`);
+
+const {name, age} = person;
+console.log(`${name} is  ${person.age}`);
+
+const {city, temp} = person.location;
+console.log(` ${city} has ${temp} temperature`);
+
+const {city, temp:temperature} = person.location;
+    if(city && temperature){
+        console.log(`It's $(temperature) in ${city}`);
+    }
+
+const {name:firstName = 'Anonymous', age} = perosn;
+console.log(`${firstName} is ${age}`);
+
+
+//////Array destructuring////////
+
+In array destructuring we [] rather tahn {} in Object destructuring.
+Ex:
+
+const address = ['chavat galli', 'belgaum', 'karnataka', '590016'];
+
+console.log(`I used to stay in address[0]`);
+
+const [street, city, state, zip] = address;
+console.log(`You are in ${city} city of ${state} state`);
+
+const [, city,state] = address;
+console.log(`You are in ${city} of ${state} state`);
+
+//Setting default state
+const [, city,state= 'Belagavi'] = address;
+console.log(` You are in ${city}`);
