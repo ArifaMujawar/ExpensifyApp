@@ -87,3 +87,8 @@ console.log(`You are in ${city} of ${state} state`);
 //Setting default state
 const [, city,state= 'Belagavi'] = address;
 console.log(` You are in ${city}`);
+
+###REDUCERS####
+-Reducers are pure functions. The functions depend on input 
+for the output rather than any other variable defined in outer scope.
+- Reducers never chnage state or action
