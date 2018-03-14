@@ -92,3 +92,6 @@ console.log(` You are in ${city}`);
 -Reducers are pure functions. The functions depend on input 
 for the output rather than any other variable defined in outer scope.
 - Reducers never chnage state or action
+
+-Timestamp counted in milliseconds. It starts from January 1st, 1970,
+also known as unix epoch. Negative time is counted as reverse of that date.
