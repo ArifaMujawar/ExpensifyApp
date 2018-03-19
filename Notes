@@ -71,7 +71,7 @@ console.log(`${firstName} is ${age}`);
 
 //////Array destructuring////////
 
-In array destructuring we [] rather tahn {} in Object destructuring.
+In array destructuring we use [] rather than {} in Object destructuring.
 Ex:
 
 const address = ['chavat galli', 'belgaum', 'karnataka', '590016'];
